@@ -5,10 +5,12 @@ public class ShopApp {
 		
 		double tax = 0.2;
 		double total;
+		int measurement = 3;
 		
 		Customer c1 = new Customer();
 		
 		c1.name = "Pinky";
+		c1.size = "S";
 		System.out.println("Customer is " + c1.name);
 		
 		Clothing item1 = new Clothing();
@@ -26,5 +28,20 @@ public class ShopApp {
 		
 		total = (item1.price + item2.price + item2.price) * (1 + tax);
 		System.out.println("The total is " + total);
+		
+		
+		switch (measurement) {
+		case 1, 2, 3:
+			c1.size = "S";
+			break;
+		case 4, 5, 6:
+			c1.size = "M";
+			break;
+		case 7, 8, 9:
+			c1.size = "L";
+		default:
+			c1.size = "X";
+		}
+		
 	}
 }
