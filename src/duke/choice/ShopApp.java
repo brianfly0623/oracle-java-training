@@ -45,7 +45,7 @@ public class ShopApp {
 			c1.size = "X";
 		}
 		
-		//			  \/ var.	\/ nome q est· no Array Clothing
+		//	      \/ var.	\/ nome q est√° no Array Clothing
 		for (Clothing item : items) {
 			if (c1.size.equals(item.size)) {
 				total += item.price;
