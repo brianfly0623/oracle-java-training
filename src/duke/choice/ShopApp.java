@@ -55,8 +55,8 @@ public class ShopApp {
 		
 		//	      \/ var.	\/ nome q está no Array Clothing
 		for (Clothing item : items) {
-			if (c1.size.equals(item.size)) {
-				total += item.price;
+			if (c1.getSize().equals(item.getSize())) {
+				total += item.getPrice();
 				System.out.println("Item: " + item.description + ", " + item.price + " dolars and size " + item.size);
 				if (total > 15 ) {
 					break;
