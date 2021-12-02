@@ -9,8 +9,8 @@ public class ShopApp {
 		
 		Customer c1 = new Customer();
 		
-		c1.name = "Pinky";
-		c1.size = "S";
+		c1.setName("Pinky");
+		c1.setSize("S");
 		System.out.println("Customer is " + c1.name);
 		
 		Clothing item1 = new Clothing();
@@ -18,20 +18,20 @@ public class ShopApp {
 		
 		Clothing[] items = {item1, item2, new Clothing(), new Clothing()};
 		
-		item1.description = "Blue jacket";
-		item1.price = 20.9;
+		item1.setDescription("Blue jacket");
+		item1.setPrice(20.9);
 		
-		item2.description = "Orange T-Shirt";
-		item2.price = 10.5;
-		item2.size = "S";
+		item2.setDescription("Orange T-Shirt");
+		item2.setPrice(10.5);
+		item2.setSize("S");
 		
-		items[2].description = "Green Scarf";
-		items[2].price = 5.0;
-		items[2].size = "S";
+		items[2].setDescription("Green Scarf");
+		items[2].setPrice(5.0);
+		items[2].setSize("S");
 		
-		items[3].description = "Blue T-Shirt";
-		items[3].price = 5.0;
-		items[3].size = "S";
+		items[3].setDescription("Blue T-Shirt");
+		items[3].setPrice(5.0);
+		items[3].setSize("S");
 		
 //		System.out.println("First item: " + item1.description + ", " + item1.price + " dolars and size " + item1.size);
 //		System.out.println("Second item: " + item2.description + ", " + item2.price + " dolars and size " + item2.size);
@@ -42,15 +42,15 @@ public class ShopApp {
 		
 		switch (measurement) {
 		case 1, 2, 3:
-			c1.size = "S";
+			c1.setSize("S");
 			break;
 		case 4, 5, 6:
-			c1.size = "M";
+			c1.setSize("M");
 			break;
 		case 7, 8, 9:
-			c1.size = "L";
+			c1.setSize("L");
 		default:
-			c1.size = "X";
+			c1.setSize("X");
 		}
 		
 		//	      \/ var.	\/ nome q está no Array Clothing
