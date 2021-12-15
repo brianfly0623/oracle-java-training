@@ -5,13 +5,13 @@ public class ShopApp {
 		
 		double tax = 0.2;
 		double total = 0;
-		int measurement = 3;
+		int measurement = 8;
 		
 		Customer c1 = new Customer();
 		
 		c1.setName("Pinky");
 		c1.setSize("S");
-		System.out.println("Customer is " + c1.name);
+		System.out.println("Customer is " + c1.getName() + ", " + c1.getSize());
 		
 		Clothing item1 = new Clothing();
 		Clothing item2 = new Clothing();
@@ -37,39 +37,16 @@ public class ShopApp {
 //		System.out.println("Second item: " + item2.description + ", " + item2.price + " dolars and size " + item2.size);
 		
 		//total = (item1.price + item2.price + item2.price) * (1 + tax);
-		System.out.println("The total is " + total);
+//		System.out.println("The total is " + total);
 		
-		
-		switch (measurement) {
-		case 1, 2, 3:
-			c1.setSize("S");
-			break;
-		case 4, 5, 6:
-			c1.setSize("M");
-			break;
-		case 7, 8, 9:
-			c1.setSize("L");
-		default:
-			c1.setSize("X");
-		}
-		
-		//	      \/ var.	\/ nome q está no Array Clothing
-		for (Clothing item : items) {
-			if (c1.getSize().equals(item.getSize())) {
-				total += item.getPrice();
-				System.out.println("Item: " + item.description + ", " + item.price + " dolars and size " + item.size);
-				if (total > 15 ) {
-					break;
-				}
-			}
-		}
+		c1.addItems(items);
+		c1.setSize(measurement);
+		System.out.println("Customer is " + c1.getName() + ", " + c1.getSize());
 
-		System.out.println("Total = " + total);
-		
-		Clothing jacket = new Clothing();
-		jacket.measure(12);
-		String size = jacket.getSize();
-		System.out.println(jacket.getSize());
+		for (Clothing item : items) {
+			
+			System.out.println("Item " + ", " + item.getDescription() + ", " + item.getPrice() + ", " + item.getSize());
+		}
 		
 	}
 }
