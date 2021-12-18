@@ -44,5 +44,10 @@ public class Clothing {
 		this.size = size;
 	}
 	
+	@Override
+	public String toString() {
+		return getDescription() + ", " + getPrice() + ", " + getSize();
+	}
+	
 	
 }
